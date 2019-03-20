@@ -41,8 +41,8 @@
     <jackson-ver>2.9.8</jackson-ver>
     <jackson-threetenbp-version>2.6.4</jackson-threetenbp-version>
 
-    <junit.version>5.2.0</junit.version>
-    <junit.platform>1.2.0</junit.platform>
+    <junit.version>5.4.0</junit.version>
+    <junit.platform.version>1.4.0</junit.platform.version>
   </properties>
 
   <repositories>
@@ -317,12 +317,12 @@
       <dependency>
         <groupId>de.escalon.hypermedia</groupId>
         <artifactId>hydra-spring</artifactId>
-        <version>0.4.2-SNAPSHOT</version>
+        <version>0.4.2</version>
       </dependency>
       <dependency>
         <groupId>de.escalon.hypermedia</groupId>
         <artifactId>hydra-jsonld</artifactId>
-        <version>0.4.2-SNAPSHOT</version>
+        <version>0.4.2</version>
       </dependency>
 
 
@@ -515,6 +515,12 @@
 
       <dependency>
         <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-engine</artifactId>
         <version>${junit.version}</version>
         <scope>test</scope>
@@ -566,24 +572,24 @@
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <!-- latest version (2.20.1) does not work well with JUnit5 -->
-          <version>2.21.0</version>
+          <version>2.22.0</version>
           <dependencies>
-            <dependency>
-              <groupId>org.junit.platform</groupId>
-              <artifactId>junit-platform-surefire-provider</artifactId>
-              <version>${junit.platform}</version>
-            </dependency>
             <dependency>
               <groupId>org.junit.jupiter</groupId>
               <artifactId>junit-jupiter-engine</artifactId>
               <version>${junit.version}</version>
             </dependency>
             <dependency>
-              <groupId>org.junit.vintage</groupId>
-              <artifactId>junit-vintage-engine</artifactId>
+              <groupId>org.junit.jupiter</groupId>
+              <artifactId>junit-jupiter-api</artifactId>
               <version>${junit.version}</version>
             </dependency>
           </dependencies>
+        </plugin>
+
+        <plugin>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.2.2</version>
         </plugin>
 
       </plugins>
