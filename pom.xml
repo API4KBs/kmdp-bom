@@ -134,7 +134,7 @@
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>kmdp-model-metadata</artifactId>
+        <artifactId>kmdp-asset-metadata</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
@@ -537,6 +537,13 @@
         <version>${junit.version}</version>
         <scope>test</scope>
       </dependency>
+      <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-all</artifactId>
+        <version>1.9.5</version>
+        <scope>test</scope>
+      </dependency>
+
       <dependency>
         <groupId>org.reflections</groupId>
         <artifactId>reflections</artifactId>
