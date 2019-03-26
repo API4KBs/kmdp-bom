@@ -692,7 +692,7 @@
         <configuration>
           <message>Maven artifacts for ${project.name} ${project.version}</message>
           <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
-          <branch>refs/heads/mvn-repo</branch>
+          <branch>refs/heads/kmdp-bom</branch>
           <includes><include>**/*</include></includes>
           <repositoryName>mvn-repo</repositoryName>
           <repositoryOwner>API4KBs</repositoryOwner>
