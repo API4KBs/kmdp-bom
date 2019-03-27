@@ -27,6 +27,30 @@
   <packaging>pom</packaging>
 
   <name>KMDP :: Bill Of Materials</name>
+  <description>API4KP Reference Implementation - Maven Bill of Materials</description>
+  <url>https://api4kbs.github.io/</url>
+
+  <licenses>
+    <license>
+      <name>The Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Davide Sottara</name>
+      <email>sottara.davide@mayo.edu</email>
+      <organization>Mayo Clinic</organization>
+      <organizationUrl>http://www.mayo.edu</organizationUrl>
+    </developer>
+    <developer>
+      <name>Kevin Peterson</name>
+      <email>peterson.kevin@mayo.edu</email>
+      <organization>Mayo Clinic</organization>
+      <organizationUrl>http://www.mayo.edu</organizationUrl>
+    </developer>
+  </developers>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -50,8 +74,9 @@
   </properties>
 
   <scm>
-    <developerConnection>scm:git:ssh://github.com/API4KBs/kmdp-bom.git</developerConnection>
-    <url>https://github.com/API4KBs/kmdp-bom</url>
+    <connection>scm:git:git://github.com/API4KBs/kmdp-bom.git</connection>
+    <developerConnection>scm:git:ssh://github.com:API4KBs/kmdp-bom.git</developerConnection>
+    <url>https://github.com/API4KBs/kmdp-bom/tree/master</url>
   </scm>
 
   <repositories>
@@ -61,6 +86,14 @@
       <releases>
         <enabled>true</enabled>
       </releases>
+    </repository>
+    <repository>
+      <id>bintray-api4kbs-API4KP-Mvn-Repo</id>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <name>bintray</name>
+      <url>https://dl.bintray.com/api4kbs/API4KP-Mvn-Repo</url>
     </repository>
   </repositories>
   <pluginRepositories>
@@ -172,6 +205,16 @@
 
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
+        <artifactId>xmi-xsd-xslt</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>edu.mayo.kmdp</groupId>
+        <artifactId>xsd-yamls-xslt</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>edu.mayo.kmdp</groupId>
         <artifactId>terms-owl-to-skos</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -188,11 +231,6 @@
         <version>${project.version}</version>
       </dependency>
 
-      <dependency>
-        <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>language-detector</artifactId>
-        <version>${project.version}</version>
-      </dependency>
 
 
       <!-- All 3rd party -->
@@ -623,23 +661,59 @@
           <version>3.2.2</version>
         </plugin>
 
-
         <plugin>
-          <groupId>org.commonjava.maven.plugins</groupId>
-          <artifactId>directory-maven-plugin</artifactId>
-          <version>0.3.1</version>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
           <executions>
             <execution>
-              <id>root</id>
+              <id>attach-sources</id>
               <goals>
-                <goal>execution-root</goal>
+                <goal>jar</goal>
               </goals>
-              <phase>initialize</phase>
-              <configuration>
-                <property>project.build.root</property>
-              </configuration>
             </execution>
           </executions>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <executions>
+            <execution>
+              <id>attach-javadocs</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <tags>
+              <tag>
+                <name>goal</name>
+                <placement>a</placement>
+                <head>Goal:</head>
+              </tag>
+              <tag>
+                <name>phase</name>
+                <placement>a</placement>
+                <head>Phase:</head>
+              </tag>
+              <tag>
+                <name>threadSafe</name>
+                <placement>a</placement>
+                <head>Thread Safe:</head>
+              </tag>
+              <tag>
+                <name>requiresDependencyResolution</name>
+                <placement>a</placement>
+                <head>Requires Dependency Resolution:</head>
+              </tag>
+              <tag>
+                <name>requiresProject</name>
+                <placement>a</placement>
+                <head>Requires Project:</head>
+              </tag>
+            </tags>
+          </configuration>
         </plugin>
 
       </plugins>
@@ -652,6 +726,13 @@
         <artifactId>maven-surefire-plugin</artifactId>
       </plugin>
 
+      <plugin>
+        <artifactId>maven-source-plugin</artifactId>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+      </plugin>
 
       <!--plugin>
       <groupId>com.github.ferstl</groupId>
