@@ -688,6 +688,9 @@
             </execution>
           </executions>
           <configuration>
+            <quiet>true</quiet>
+              <additionalparam>-Xdoclint:none</additionalparam>
+              <additionalJOption>-Xdoclint:none</additionalJOption>
             <tags>
               <tag>
                 <name>goal</name>
