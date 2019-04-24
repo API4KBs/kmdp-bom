@@ -72,6 +72,7 @@
 
     <swagger.codegen.version>2.4.4</swagger.codegen.version>
 
+    <saxon.version>9.8.0-8</saxon.version>
 
     <junit.version>5.4.0</junit.version>
     <junit.platform.version>1.4.0</junit.platform.version>
@@ -522,7 +523,7 @@
       <dependency>
         <groupId>net.sf.saxon</groupId>
         <artifactId>Saxon-HE</artifactId>
-        <version>9.8.0-8</version>
+        <version>${saxon.version}</version>
       </dependency>
       <dependency>
         <groupId>xml-resolver</groupId>
@@ -788,8 +789,21 @@
         </plugin>
 
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
           <version>3.2.2</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.1.0</version>
         </plugin>
 
         <plugin>
