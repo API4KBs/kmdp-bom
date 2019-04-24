@@ -405,6 +405,20 @@
         <groupId>de.escalon.hypermedia</groupId>
         <artifactId>hydra-spring</artifactId>
         <version>0.4.2</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.springframework.hateoas</groupId>
+            <artifactId>spring-hateoas</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.springframework.plugin</groupId>
+            <artifactId>spring-plugin-core</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
       <dependency>
         <groupId>de.escalon.hypermedia</groupId>
