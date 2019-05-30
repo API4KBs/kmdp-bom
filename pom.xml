@@ -994,7 +994,7 @@
         <plugin>
           <groupId>io.swagger</groupId>
           <artifactId>swaggerhub-maven-plugin</artifactId>
-          <version>1.0.2</version>
+          <version>1.0.6</version>
           <configuration>
             <owner>mayo-clinic</owner>
             <format>yaml</format>
