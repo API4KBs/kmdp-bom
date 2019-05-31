@@ -60,7 +60,9 @@
     <maven.compiler.target>1.8</maven.compiler.target>
 
     <api4kp.version>2.0.0</api4kp.version>
-    <kmdp.version>2.0.0</kmdp.version>
+    <kmdp.impl.version>[2.0.0,2.0.1)</kmdp.impl.version>
+    <kmdp.standards.version>[2.0.0,2.0.1)</kmdp.standards.version>
+    <kmdp.archetype.version>[2.0.0,2.0.1)</kmdp.archetype.version>
 
     <cqf.version>1.3.10</cqf.version>
     <owlapi.version>5.1.10</owlapi.version>
@@ -79,6 +81,8 @@
     <swagger.codegen.version>2.4.4</swagger.codegen.version>
 
     <saxon.version>9.8.0-8</saxon.version>
+    <xmlcatalog-resolver.version>1.0.5</xmlcatalog-resolver.version>
+    <xerces.version>2.12.0</xerces.version>
 
     <junit.version>5.4.0</junit.version>
     <junit.platform.version>1.4.0</junit.platform.version>
@@ -98,71 +102,33 @@
     <dependencies>
 
       <!-- Core specs -->
+
       <dependency>
         <groupId>org.omg.spec</groupId>
         <artifactId>API4KP</artifactId>
         <version>${api4kp.version}</version>
       </dependency>
 
+      <!-- Core Specs Implementation -->
+
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>kmdp-environment</artifactId>
-        <version>${project.version}</version>
+        <version>${kmdp.impl.version}</version>
       </dependency>
-      <dependency>
-        <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>kmdp-languages</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>kmdp-ops</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>kmdp-utils</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>kmdp-comparator-utils</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-
 
       <!-- Utils -->
 
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>kmdp-lang-utils</artifactId>
-        <version>${project.version}</version>
+        <artifactId>kmdp-utils</artifactId>
+        <version>${kmdp.impl.version}</version>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>kmdp-test-utils</artifactId>
-        <version>${project.version}</version>
+        <version>${kmdp.impl.version}</version>
         <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>kmdp-property-utils</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>kmdp-fhir2-utils</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>kmdp-fhir3-utils</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>kmdp-ws-utils</artifactId>
-        <version>${project.version}</version>
       </dependency>
 
       <!-- Models -->
@@ -170,27 +136,27 @@
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>kmdp-datatype</artifactId>
-        <version>${project.version}</version>
+        <version>${kmdp.impl.version}</version>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>kmdp-terminology-model</artifactId>
-        <version>${project.version}</version>
+        <version>${kmdp.impl.version}</version>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>kmdp-terminology-content</artifactId>
-        <version>${project.version}</version>
+        <version>${kmdp.impl.version}</version>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>kmdp-asset-metadata</artifactId>
-        <version>${project.version}</version>
+        <version>${kmdp.impl.version}</version>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>kmdp-service-descr</artifactId>
-        <version>${project.version}</version>
+        <version>${kmdp.impl.version}</version>
       </dependency>
 
 
@@ -198,30 +164,30 @@
 
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>xmi-xsd-xslt</artifactId>
-        <version>${project.version}</version>
+        <artifactId>xmi-xsd-xslt-translator</artifactId>
+        <version>${kmdp.impl.version}</version>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>xsd-yamls-xslt</artifactId>
-        <version>${project.version}</version>
+        <artifactId>xsd-yamls-xslt-translator</artifactId>
+        <version>${kmdp.impl.version}</version>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>terms-owl-to-skos</artifactId>
-        <version>${project.version}</version>
+        <version>${kmdp.impl.version}</version>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>terms-generator</artifactId>
-        <version>${project.version}</version>
+        <version>${kmdp.impl.version}</version>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>terms-generator</artifactId>
         <type>test-jar</type>
         <scope>test</scope>
-        <version>${project.version}</version>
+        <version>${kmdp.impl.version}</version>
       </dependency>
 
 
@@ -229,30 +195,42 @@
 
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>omg-dmn</artifactId>
-        <version>${project.version}</version>
+        <artifactId>omg-dmn-11</artifactId>
+        <version>${kmdp.standards.version}</version>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>omg-cmmn</artifactId>
-        <version>${project.version}</version>
+        <artifactId>omg-dmn-12</artifactId>
+        <version>${kmdp.standards.version}</version>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>hl7-knart</artifactId>
-        <version>${project.version}</version>
+        <artifactId>omg-cmmn-11</artifactId>
+        <version>${kmdp.standards.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>edu.mayo.kmdp</groupId>
+        <artifactId>hl7-knart-13</artifactId>
+        <version>${kmdp.standards.version}</version>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>hl7-fhir-stu3</artifactId>
-        <version>${project.version}</version>
+        <version>${kmdp.standards.version}</version>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>hl7-fhir-dstu2</artifactId>
-        <version>${project.version}</version>
+        <version>${kmdp.standards.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>edu.mayo.kmdp</groupId>
+        <artifactId>w3c-odrl-21</artifactId>
+        <version>${kmdp.standards.version}</version>
       </dependency>
 
+
+      <!-- Supporting Libraries -->
 
       <dependency>
         <groupId>info.cqframework</groupId>
@@ -625,7 +603,7 @@
       <dependency>
         <groupId>edu.stanford.protege</groupId>
         <artifactId>org.protege.xmlcatalog</artifactId>
-        <version>1.0.5</version>
+        <version>${xmlcatalog-resolver.version}</version>
         <exclusions>
           <exclusion>
             <groupId>net.sourceforge.owlapi</groupId>
