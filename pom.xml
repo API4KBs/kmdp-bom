@@ -979,6 +979,18 @@
           </configuration>
         </plugin>
 
+        <plugin>
+          <groupId>edu.mayo.kmdp</groupId>
+          <artifactId>configurable-archetype-plugin</artifactId>
+          <version>0.1.1</version>
+        </plugin>
+
+        <plugin>
+          <groupId>io.reformanda.semper</groupId>
+          <artifactId>dependencyversion-maven-plugin</artifactId>
+          <version>1.0.1</version>
+        </plugin>
+
       </plugins>
 
     </pluginManagement>
