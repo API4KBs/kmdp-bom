@@ -977,7 +977,7 @@
         <plugin>
           <groupId>edu.mayo.kmdp</groupId>
           <artifactId>kmdp-configurable-archetype-plugin</artifactId>
-          <version>0.1.1</version>
+          <version>0.1.2</version>
         </plugin>
 
         <plugin>
