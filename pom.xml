@@ -936,7 +936,7 @@
                 <groupId>org.jvnet.jaxb2_commons</groupId>
                 <artifactId>jaxb2-basics</artifactId>
                 <!--<version>1.11.1</version>-->
-                <version>${jaxb2.version}</version>
+                <version>${jaxb2.compiler.version}</version>
               </plugin>
               <plugin>
                 <groupId>org.jvnet.jaxb2_commons</groupId>
