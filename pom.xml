@@ -1061,6 +1061,7 @@
             <exclude>**/*.xsd</exclude>
             <exclude>**/*.xjb</exclude>
             <exclude>**/*.xml</exclude>
+            <exclude>**/*.sh</exclude>
             <exclude>**/LICENSE</exclude>
             <exclude>**/*travis*</exclude>
           </excludes>
