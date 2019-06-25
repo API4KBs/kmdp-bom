@@ -101,6 +101,16 @@
         <artifactId>kmdp-environment</artifactId>
         <version>${kmdp.impl.version}</version>
       </dependency>
+      <dependency>
+        <groupId>edu.mayo.kmdp</groupId>
+        <artifactId>kmdp-openapi-spring-service-archetype</artifactId>
+        <version>${kmdp.archetype.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>edu.mayo.kmdp</groupId>
+        <artifactId>kmdp-openapi-spring-implementation-archetype</artifactId>
+        <version>${kmdp.archetype.version}</version>
+      </dependency>
 
       <!-- Utils -->
 
