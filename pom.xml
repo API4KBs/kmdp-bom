@@ -1031,7 +1031,7 @@
           <dependencies>
             <dependency>
               <groupId>edu.mayo.kmdp</groupId>
-              <artifactId>kmdp-enforcer-rules</artifactId>
+              <artifactId>kmdp-mvn-enforcer-rules</artifactId>
               <version>1.0.0</version>
             </dependency>
           </dependencies>
