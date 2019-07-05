@@ -500,6 +500,7 @@
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-test</artifactId>
+        <version>${springframework.boot.version}</version>
         <exclusions>
           <exclusion>
             <groupId>junit</groupId>
@@ -511,6 +512,7 @@
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-test</artifactId>
+        <version>${springframework.boot.version}</version>
         <scope>test</scope>
         <exclusions>
           <exclusion>
@@ -1007,6 +1009,34 @@
           <version>1.0.1</version>
         </plugin>
 
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <version>3.0.0-M2</version>
+
+          <executions>
+            <execution>
+              <id>enforce</id>
+              <configuration>
+                <rules>
+                  <VersionRangeRule implementation="edu.mayo.kmdp.VersionRangeRule"/>
+                </rules>
+              </configuration>
+              <goals>
+                <goal>enforce</goal>
+              </goals>
+              <phase>validate</phase>
+            </execution>
+          </executions>
+          <dependencies>
+            <dependency>
+              <groupId>edu.mayo.kmdp</groupId>
+              <artifactId>kmdp-enforcer-rules</artifactId>
+              <version>1.0.0</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+
       </plugins>
 
     </pluginManagement>
@@ -1148,29 +1178,6 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-enforcer-plugin</artifactId>
-            <version>3.0.0-M2</version>
-
-            <executions>
-              <execution>
-                <id>enforce</id>
-                <configuration>
-                  <rules>
-                    <VersionRangeRule implementation="edu.mayo.kmdp.VersionRangeRule"/>
-                  </rules>
-                </configuration>
-                <goals>
-                  <goal>enforce</goal>
-                </goals>
-                <phase>validate</phase>
-              </execution>
-            </executions>
-            <dependencies>
-              <dependency>
-                <groupId>edu.mayo.kmdp</groupId>
-                <artifactId>kmdp-enforcer-rules</artifactId>
-                <version>1.0.0</version>
-              </dependency>
-            </dependencies>
           </plugin>
         </plugins>
       </build>
