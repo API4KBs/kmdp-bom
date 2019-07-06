@@ -42,7 +42,7 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
 
-    <api4kp.version>2.0.0</api4kp.version>
+    <api4kp.version>(2.0.0,2.1.0)</api4kp.version>
     <kmdp.impl.version>(2.5.0,2.6.0)</kmdp.impl.version>
     <kmdp.standards.version>(2.5.0,2.6.0)</kmdp.standards.version>
     <kmdp.archetype.version>(2.5.0,2.6.0)</kmdp.archetype.version>
