@@ -50,10 +50,10 @@ git rebase "rel_$1"
 
 # Revert all necesssary version changes/fixtures
 mvn versions:set -DnewVersion=$3
-mvn versions:set-property -Dproperty=api4kp.version -DnewVersion="($2,)"
-mvn versions:set-property -Dproperty=kmdp.impl.version -DnewVersion="($1,)"
-mvn versions:set-property -Dproperty=kmdp.standards.version -DnewVersion="($1,)"
-mvn versions:set-property -Dproperty=kmdp.archetype.version -DnewVersion="($1,)"
+mvn versions:set-property -Dproperty=api4kp.version -DnewVersion="[$2,)"
+mvn versions:set-property -Dproperty=kmdp.impl.version -DnewVersion="[$1,)"
+mvn versions:set-property -Dproperty=kmdp.standards.version -DnewVersion="[$1,)"
+mvn versions:set-property -Dproperty=kmdp.archetype.version -DnewVersion="[$1,)"
 
 # Commit changes
 git commit -am "Start version $3+"
