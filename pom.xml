@@ -234,6 +234,11 @@
         <version>${kmdp.standards.version}</version>
       </dependency>
       <dependency>
+        <groupId>ca.uhn.hapi.fhir</groupId>
+        <artifactId>hapi-fhir-structures-hl7org-dstu2</artifactId>
+        <version>${hapi.fhir.version}</version>
+      </dependency>
+      <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>w3c-odrl-21</artifactId>
         <version>${kmdp.standards.version}</version>
