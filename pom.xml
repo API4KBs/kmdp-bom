@@ -70,7 +70,9 @@
     <xmlcatalog-resolver.version>1.0.5</xmlcatalog-resolver.version>
     <xerces.version>2.12.0</xerces.version>
 
+    <slf4j.api.version>1.7.26</slf4j.api.version>
     <log4j2.version>2.11.2</log4j2.version>
+    <logback.version>1.2.3</logback.version>
 
     <junit.version>5.4.0</junit.version>
     <junit.platform.version>1.4.0</junit.platform.version>
@@ -88,12 +90,9 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-api</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-slf4j-impl</artifactId>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${slf4j.api.version}</version>
     </dependency>
   </dependencies>
 
@@ -484,10 +483,6 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
           </exclusion>
-          <exclusion>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-logging</artifactId>
-          </exclusion>
         </exclusions>
       </dependency>
 
@@ -499,10 +494,6 @@
           <exclusion>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-logging</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -533,10 +524,6 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
           </exclusion>
-          <exclusion>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-logging</artifactId>
-          </exclusion>
         </exclusions>
       </dependency>
 
@@ -550,17 +537,7 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
           </exclusion>
-          <exclusion>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-logging</artifactId>
-          </exclusion>
         </exclusions>
-      </dependency>
-
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-log4j2</artifactId>
-        <version>${springframework.boot.version}</version>
       </dependency>
 
       <dependency>
@@ -704,16 +681,15 @@
       </dependency>
 
       <dependency>
-        <groupId>org.apache.logging.log4j</groupId>
-        <artifactId>log4j-api</artifactId>
-        <version>${log4j2.version}</version>
+        <groupId>org.sl4fj</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j.api.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.apache.logging.log4j</groupId>
-        <artifactId>log4j-slf4j-impl</artifactId>
-        <version>${log4j2.version}</version>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>${logback.version}</version>
       </dependency>
-
 
       <dependency>
         <groupId>org.apache.maven</groupId>
