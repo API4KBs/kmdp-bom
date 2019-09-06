@@ -1116,46 +1116,6 @@
       </configuration>
       </plugin-->
 
-      <plugin>
-        <groupId>com.mycila</groupId>
-        <artifactId>license-maven-plugin</artifactId>
-        <version>3.0</version>
-        <configuration>
-          <header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
-          <properties>
-            <owner>Mayo Clinic</owner>
-            <email>RSTKNOWLEDGEMGMT@mayo.edu</email>
-            <project.inceptionYear>2018</project.inceptionYear>
-          </properties>
-          <excludes>
-            <exclude>**/README</exclude>
-            <exclude>src/test/resources/**</exclude>
-            <exclude>src/main/resources/**</exclude>
-            <exclude>**/*.xsd</exclude>
-            <exclude>**/*.xjb</exclude>
-            <exclude>**/*.xml</exclude>
-            <exclude>**/*.sh</exclude>
-            <exclude>**/LICENSE</exclude>
-            <exclude>**/*travis*</exclude>
-          </excludes>
-        </configuration>
-        <executions>
-          <execution>
-            <id>add</id>
-            <goals>
-              <goal>format</goal>
-            </goals>
-            <phase>process-sources</phase>
-          </execution>
-          <execution>
-            <id>verify</id>
-            <goals>
-              <goal>check</goal>
-            </goals>
-            <phase>process-sources</phase>
-          </execution>
-        </executions>
-      </plugin>
 
     </plugins>
 
@@ -1216,6 +1176,58 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-enforcer-plugin</artifactId>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>license-headers</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.mycila</groupId>
+            <artifactId>license-maven-plugin</artifactId>
+            <version>3.0</version>
+            <configuration>
+              <header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
+              <properties>
+                <owner>Mayo Clinic</owner>
+                <email>RSTKNOWLEDGEMGMT@mayo.edu</email>
+                <project.inceptionYear>2018</project.inceptionYear>
+              </properties>
+              <excludes>
+                <exclude>**/README</exclude>
+                <exclude>src/test/resources/**</exclude>
+                <exclude>src/main/resources/**</exclude>
+                <exclude>**/*.xsd</exclude>
+                <exclude>**/*.xjb</exclude>
+                <exclude>**/*.xml</exclude>
+                <exclude>**/*.xml.versionsBackup</exclude>
+                <exclude>**/*.sh</exclude>
+                <exclude>**/LICENSE</exclude>
+                <exclude>**/*travis*</exclude>
+              </excludes>
+            </configuration>
+            <executions>
+              <execution>
+                <id>add</id>
+                <goals>
+                  <goal>format</goal>
+                </goals>
+                <phase>process-sources</phase>
+              </execution>
+              <execution>
+                <id>verify</id>
+                <goals>
+                  <goal>check</goal>
+                </goals>
+                <phase>process-sources</phase>
+              </execution>
+            </executions>
           </plugin>
         </plugins>
       </build>
