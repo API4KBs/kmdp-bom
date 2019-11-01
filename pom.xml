@@ -209,6 +209,12 @@
       <!-- All 3rd party -->
 
       <dependency>
+        <groupId>com.github.zafarkhaja</groupId>
+        <artifactId>java-semver</artifactId>
+        <version>0.9.0</version>
+      </dependency>
+
+      <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>omg-dmn-11</artifactId>
         <version>${kmdp.standards.version}</version>
