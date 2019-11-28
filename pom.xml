@@ -431,7 +431,7 @@
       <dependency>
         <groupId>org.apache.poi</groupId>
         <artifactId>poi-ooxml</artifactId>
-        <version>3.15</version>
+        <version>4.1.1</version>
       </dependency>
       <dependency>
         <groupId>com.opencsv</groupId>
@@ -565,15 +565,11 @@
         <version>${saxon.version}</version>
       </dependency>
       <dependency>
-        <groupId>xml-resolver</groupId>
-        <artifactId>xml-resolver</artifactId>
+        <groupId>org.apache.xml</groupId>
+        <artifactId>xml-commons-resolver</artifactId>
         <version>1.2</version>
       </dependency>
-      <dependency>
-        <groupId>xerces</groupId>
-        <artifactId>xercesImpl</artifactId>
-        <version>2.12.0</version>
-      </dependency>
+
 
 
       <dependency>
@@ -943,6 +939,7 @@
             <quiet>true</quiet>
             <additionalparam>-Xdoclint:none</additionalparam>
             <additionalJOption>-Xdoclint:none</additionalJOption>
+            <detectOfflineLinks>false</detectOfflineLinks>
             <tags>
               <tag>
                 <name>goal</name>
