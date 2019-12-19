@@ -1,4 +1,4 @@
-** Version [next]
+** Version 5.1.0
 
 - HAPI FHIR 3.8.0
 - Add dependencies from deprecated kmdp-ext-bom 
