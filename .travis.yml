@@ -2,6 +2,10 @@ language: java
 cache:
   directories:
   - "$HOME/.m2"
+branches:
+  only:
+    - master
+    - develop
 deploy:
   - provider: script
     script: mvn deploy -Ppublic -s .travis.settings.xml
