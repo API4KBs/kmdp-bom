@@ -411,6 +411,11 @@
         <artifactId>jackson-datatype-threetenbp</artifactId>
         <version>${jackson-threetenbp.version}</version>
       </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-jdk8</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
 
       <dependency>
         <groupId>de.escalon.hypermedia</groupId>
