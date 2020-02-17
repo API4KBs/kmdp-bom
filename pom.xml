@@ -5,7 +5,7 @@
 
   <groupId>edu.mayo.kmdp</groupId>
   <artifactId>kmdp-bom</artifactId>
-  <version>6.0.0</version>
+  <version>6.1.0-SNAPSHOT</version>
 
   <packaging>pom</packaging>
 
@@ -42,10 +42,10 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
 
-    <api4kp.version>[5.1.0,)</api4kp.version>
-    <kmdp.impl.version>[5.1.0,)</kmdp.impl.version>
-    <kmdp.standards.version>[5.1.0,)</kmdp.standards.version>
-    <kmdp.archetype.version>[5.1.0,)</kmdp.archetype.version>
+    <api4kp.version>6.1.0-SNAPSHOT</api4kp.version>
+    <kmdp.impl.version>6.1.0-SNAPSHOT</kmdp.impl.version>
+    <kmdp.standards.version>6.1.0-SNAPSHOT</kmdp.standards.version>
+    <kmdp.archetype.version>6.1.0-SNAPSHOT</kmdp.archetype.version>
 
     <ontology.release.version>LATEST</ontology.release.version>
 
@@ -1068,11 +1068,6 @@
           <version>3.0.0</version>
         </plugin>
 
-        <plugin>
-          <groupId>io.reformanda.semper</groupId>
-          <artifactId>dependencyversion-maven-plugin</artifactId>
-          <version>1.0.1</version>
-        </plugin>
 
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
