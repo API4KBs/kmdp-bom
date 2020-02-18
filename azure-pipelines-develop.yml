@@ -56,7 +56,7 @@ steps:
       Write-Host --------------------------------
       Write-Host POM Variables:
       Write-Host Project Group ID: $env:GROUP_ID
-      Write-Host Project Artifact ID: $env:PROJECT_VERSION
+      Write-Host Project Artifact ID: $env:ARTIFACT_ID
       Write-Host Project Snapshot Version: $env:PROJECT_SNAPSHOT_VERSION
       Write-Host Project Version: $env:PROJECT_VERSION
       Write-Host --------------------------------
