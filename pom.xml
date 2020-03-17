@@ -1092,7 +1092,7 @@
             <dependency>
               <groupId>edu.mayo.kmdp</groupId>
               <artifactId>kmdp-mvn-enforcer-rules</artifactId>
-              <version>1.0.1</version>
+              <version>1.0.2</version>
             </dependency>
           </dependencies>
         </plugin>
