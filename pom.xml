@@ -5,7 +5,7 @@
 
   <groupId>edu.mayo.kmdp</groupId>
   <artifactId>kmdp-bom</artifactId>
-  <version>6.1.0-SNAPSHOT</version>
+  <version>7.0.0-SNAPSHOT</version>
 
   <packaging>pom</packaging>
 
@@ -39,18 +39,20 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <java.version>11</java.version>
 
-    <api4kp.version>6.1.0-SNAPSHOT</api4kp.version>
-    <kmdp.impl.version>6.1.0-SNAPSHOT</kmdp.impl.version>
-    <kmdp.standards.version>6.1.0-SNAPSHOT</kmdp.standards.version>
-    <kmdp.archetype.version>6.1.0-SNAPSHOT</kmdp.archetype.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+
+    <api4kp.version>7.0.0-SNAPSHOT</api4kp.version>
+    <kmdp.impl.version>7.0.0-SNAPSHOT</kmdp.impl.version>
+    <kmdp.standards.version>7.0.0-SNAPSHOT</kmdp.standards.version>
+    <kmdp.archetype.version>7.0.0-SNAPSHOT</kmdp.archetype.version>
 
     <ontology.release.version>LATEST</ontology.release.version>
 
-    <cql.engine.version>1.3.9-rc1</cql.engine.version>
-    <cqf.version>1.3.17</cqf.version>
+    <cql.engine.version>1.3.11</cql.engine.version>
+    <cqf.version>1.4.8</cqf.version>
     <hapi.fhir.version>4.1.0</hapi.fhir.version>
     <owlapi.version>5.1.11</owlapi.version>
     <jena.version>3.10.0</jena.version>
@@ -64,8 +66,12 @@
     <spring.version>5.2.1.RELEASE</spring.version>
     <springfox-version>2.9.2</springfox-version>
 
-    <jaxb2.compiler.version>0.9.4</jaxb2.compiler.version>
-    <jaxb2.impl.version>2.2.11</jaxb2.impl.version>
+    <jaxb2.basics.version>0.12.0</jaxb2.basics.version>
+    <jaxb2.impl.version>2.3.1</jaxb2.impl.version>
+    <jaxb2.core.version>2.3.0.1</jaxb2.core.version>
+    <jaxb.maven.plugin.version>0.14.0</jaxb.maven.plugin.version>
+    <jaxb.annotate.version>1.1.0</jaxb.annotate.version>
+
 
     <swagger.codegen.version>2.4.4</swagger.codegen.version>
 
@@ -314,6 +320,11 @@
         <version>1</version>
       </dependency>
       <dependency>
+        <groupId>javax.annotation</groupId>
+        <artifactId>javax.annotation-api</artifactId>
+        <version>1.3.2</version>
+      </dependency>
+      <dependency>
         <groupId>javax.validation</groupId>
         <artifactId>validation-api</artifactId>
         <version>2.0.1.Final</version>
@@ -336,7 +347,7 @@
       <dependency>
         <groupId>com.sun.xml.bind</groupId>
         <artifactId>jaxb-core</artifactId>
-        <version>${jaxb2.impl.version}</version>
+        <version>${jaxb2.core.version}</version>
       </dependency>
       <dependency>
         <groupId>com.sun.xml.bind</groupId>
@@ -347,32 +358,23 @@
       <dependency>
         <groupId>org.jvnet.jaxb2_commons</groupId>
         <artifactId>jaxb2-basics-runtime</artifactId>
-        <!--<version>1.11.1</version>-->
-        <version>${jaxb2.compiler.version}</version>
+        <version>${jaxb2.basics.version}</version>
       </dependency>
       <dependency>
         <groupId>org.jvnet.jaxb2_commons</groupId>
         <artifactId>jaxb2-basics-annotate</artifactId>
-        <!--<version>1.0.4</version>-->
-        <version>1.0.2</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.jvnet.jaxb2_commons</groupId>
-            <artifactId>jaxb2-basics-tools</artifactId>
-          </exclusion>
-        </exclusions>
+        <version>${jaxb.annotate.version}</version>
       </dependency>
       <dependency>
         <groupId>org.jvnet.jaxb2_commons</groupId>
         <artifactId>jaxb2-basics-tools</artifactId>
-        <version>${jaxb2.compiler.version}</version>
+        <version>${jaxb2.basics.version}</version>
       </dependency>
 
       <dependency>
         <groupId>org.jvnet.jaxb2_commons</groupId>
         <artifactId>jaxb2-basics</artifactId>
-        <!--<version>1.11.1</version>-->
-        <version>${jaxb2.compiler.version}</version>
+        <version>${jaxb2.basics.version}</version>
       </dependency>
       <dependency>
         <groupId>net.java.dev.jaxb2-commons</groupId>
@@ -389,7 +391,7 @@
       <dependency>
         <groupId>org.jvnet.jaxb2.maven2</groupId>
         <artifactId>maven-jaxb2-plugin</artifactId>
-        <version>0.13.1</version>
+        <version>${jaxb.maven.plugin.version}</version>
         <exclusions>
           <exclusion>
             <groupId>junit</groupId>
@@ -865,7 +867,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-plugin-plugin</artifactId>
-          <version>3.5</version>
+          <version>3.6.0</version>
         </plugin>
 
         <plugin>
@@ -929,51 +931,51 @@
           </executions>
         </plugin>
 
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-javadoc-plugin</artifactId>
-          <version>3.1.1</version>
-          <executions>
-            <execution>
-              <id>attach-javadocs</id>
-              <goals>
-                <goal>jar</goal>
-              </goals>
-            </execution>
-          </executions>
-          <configuration>
-            <quiet>true</quiet>
-            <additionalJOption>-Xdoclint:none</additionalJOption>
-            <detectOfflineLinks>false</detectOfflineLinks>
-            <tags>
-              <tag>
-                <name>goal</name>
-                <placement>a</placement>
-                <head>Goal:</head>
-              </tag>
-              <tag>
-                <name>phase</name>
-                <placement>a</placement>
-                <head>Phase:</head>
-              </tag>
-              <tag>
-                <name>threadSafe</name>
-                <placement>a</placement>
-                <head>Thread Safe:</head>
-              </tag>
-              <tag>
-                <name>requiresDependencyResolution</name>
-                <placement>a</placement>
-                <head>Requires Dependency Resolution:</head>
-              </tag>
-              <tag>
-                <name>requiresProject</name>
-                <placement>a</placement>
-                <head>Requires Project:</head>
-              </tag>
-            </tags>
-          </configuration>
-        </plugin>
+<!--        <plugin>-->
+<!--          <groupId>org.apache.maven.plugins</groupId>-->
+<!--          <artifactId>maven-javadoc-plugin</artifactId>-->
+<!--          <version>3.1.1</version>-->
+<!--          <executions>-->
+<!--            <execution>-->
+<!--              <id>attach-javadocs</id>-->
+<!--              <goals>-->
+<!--                <goal>jar</goal>-->
+<!--              </goals>-->
+<!--            </execution>-->
+<!--          </executions>-->
+<!--          <configuration>-->
+<!--            <quiet>true</quiet>-->
+<!--            <additionalJOption>-Xdoclint:none</additionalJOption>-->
+<!--            <detectOfflineLinks>false</detectOfflineLinks>-->
+<!--            <tags>-->
+<!--              <tag>-->
+<!--                <name>goal</name>-->
+<!--                <placement>a</placement>-->
+<!--                <head>Goal:</head>-->
+<!--              </tag>-->
+<!--              <tag>-->
+<!--                <name>phase</name>-->
+<!--                <placement>a</placement>-->
+<!--                <head>Phase:</head>-->
+<!--              </tag>-->
+<!--              <tag>-->
+<!--                <name>threadSafe</name>-->
+<!--                <placement>a</placement>-->
+<!--                <head>Thread Safe:</head>-->
+<!--              </tag>-->
+<!--              <tag>-->
+<!--                <name>requiresDependencyResolution</name>-->
+<!--                <placement>a</placement>-->
+<!--                <head>Requires Dependency Resolution:</head>-->
+<!--              </tag>-->
+<!--              <tag>-->
+<!--                <name>requiresProject</name>-->
+<!--                <placement>a</placement>-->
+<!--                <head>Requires Project:</head>-->
+<!--              </tag>-->
+<!--            </tags>-->
+<!--          </configuration>-->
+<!--        </plugin>-->
 
         <plugin>
           <groupId>io.swagger</groupId>
@@ -984,7 +986,7 @@
         <plugin>
           <groupId>org.jvnet.jaxb2.maven2</groupId>
           <artifactId>maven-jaxb2-plugin</artifactId>
-          <version>0.13.1</version>
+          <version>${jaxb.maven.plugin.version}</version>
           <configuration>
 
             <extension>true</extension>
@@ -1017,7 +1019,7 @@
                 <groupId>org.jvnet.jaxb2_commons</groupId>
                 <artifactId>jaxb2-basics</artifactId>
                 <!--<version>1.11.1</version>-->
-                <version>${jaxb2.compiler.version}</version>
+                <version>${jaxb2.basics.version}</version>
               </plugin>
               <plugin>
                 <groupId>org.jvnet.jaxb2_commons</groupId>
@@ -1028,7 +1030,7 @@
               <plugin>
                 <groupId>org.jvnet.jaxb2_commons</groupId>
                 <artifactId>jaxb2-basics-annotate</artifactId>
-                <version>1.1.0</version>
+                <version>${jaxb.annotate.version}</version>
               </plugin>
               <plugin>
                 <groupId>de.escalon.hypermedia</groupId>
@@ -1129,9 +1131,9 @@
         <artifactId>maven-source-plugin</artifactId>
       </plugin>
 
-      <plugin>
-        <artifactId>maven-javadoc-plugin</artifactId>
-      </plugin>
+<!--      <plugin>-->
+<!--        <artifactId>maven-javadoc-plugin</artifactId>-->
+<!--      </plugin>-->
 
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
