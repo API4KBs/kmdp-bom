@@ -1080,6 +1080,12 @@
               <configuration>
                 <rules>
                   <VersionRangeRule implementation="edu.mayo.kmdp.VersionRangeRule"/>
+                  <requireReleaseDeps>
+                    <message>No SNAPSHOTs allowed as dependencies!</message>
+                  </requireReleaseDeps>
+                  <requireReleaseVersion>
+                    <message>No SNAPSHOTs allowed!</message>
+                  </requireReleaseVersion>
                 </rules>
               </configuration>
               <goals>
@@ -1092,7 +1098,7 @@
             <dependency>
               <groupId>edu.mayo.kmdp</groupId>
               <artifactId>kmdp-mvn-enforcer-rules</artifactId>
-              <version>1.0.2</version>
+              <version>1.0.3</version>
             </dependency>
           </dependencies>
         </plugin>
