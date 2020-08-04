@@ -249,6 +249,11 @@
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
+        <artifactId>omg-bpmn-202</artifactId>
+        <version>${kmdp.standards.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>edu.mayo.kmdp</groupId>
         <artifactId>hl7-knart-13</artifactId>
         <version>${kmdp.standards.version}</version>
       </dependency>
