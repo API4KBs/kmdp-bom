@@ -3,7 +3,7 @@
 
   <groupId>edu.mayo.kmdp</groupId>
   <artifactId>kmdp-bom</artifactId>
-  <version>8.0.2-SNAPSHOT</version>
+  <version>8.0.2</version>
 
   <packaging>pom</packaging>
 
@@ -42,10 +42,10 @@
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
 
-    <api4kp.version>8.0.2-SNAPSHOT</api4kp.version>
-    <kmdp.impl.version>8.0.2-SNAPSHOT</kmdp.impl.version>
-    <kmdp.standards.version>8.0.2-SNAPSHOT</kmdp.standards.version>
-    <kmdp.archetype.version>8.0.2-SNAPSHOT</kmdp.archetype.version>
+    <api4kp.version>8.0.2</api4kp.version>
+    <kmdp.impl.version>8.0.2</kmdp.impl.version>
+    <kmdp.standards.version>8.0.2</kmdp.standards.version>
+    <kmdp.archetype.version>8.0.2</kmdp.archetype.version>
 
     <ontology.release.version>LATEST</ontology.release.version>
 
