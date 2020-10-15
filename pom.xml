@@ -7,91 +7,10 @@
 
   <packaging>pom</packaging>
 
+  <!-- Project Information -->
   <name>KMDP :: Bill Of Materials</name>
-  <description>API4KP Reference Implementation - Maven Bill of Materials</description>
+  <description>API for Knowledge Platforms (API4KP) Reference Implementation - Maven Bill of Materials</description>
   <url>https://api4kbs.github.io/</url>
-
-  <licenses>
-    <license>
-      <name>The Apache License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-    </license>
-  </licenses>
-
-  <developers>
-    <developer>
-      <name>Davide Sottara</name>
-      <email>sottara.davide@mayo.edu</email>
-      <organization>Mayo Clinic</organization>
-      <organizationUrl>http://www.mayo.edu</organizationUrl>
-    </developer>
-    <developer>
-      <name>Kevin Peterson</name>
-      <email>peterson.kevin@mayo.edu</email>
-      <organization>Mayo Clinic</organization>
-      <organizationUrl>http://www.mayo.edu</organizationUrl>
-    </developer>
-  </developers>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-    <java.version>11</java.version>
-
-    <maven.compiler.source>${java.version}</maven.compiler.source>
-    <maven.compiler.target>${java.version}</maven.compiler.target>
-
-    <api4kp.version>8.0.4-SNAPSHOT</api4kp.version>
-    <kmdp.impl.version>8.0.4-SNAPSHOT</kmdp.impl.version>
-    <kmdp.standards.version>8.0.4-SNAPSHOT</kmdp.standards.version>
-    <kmdp.archetype.version>8.0.4-SNAPSHOT</kmdp.archetype.version>
-
-    <ontology.release.version>LATEST</ontology.release.version>
-
-    <cql.engine.version>1.3.11</cql.engine.version>
-    <cqf.version>1.4.8</cqf.version>
-    <hapi.fhir.version>4.1.0</hapi.fhir.version>
-    <owlapi.version>5.1.11</owlapi.version>
-    <jena.version>3.10.0</jena.version>
-    <oak.version>1.20.0</oak.version>
-    <antlr.version>4.7.2</antlr.version>
-
-    <jackson.version>2.9.8</jackson.version>
-    <jackson-threetenbp.version>2.6.4</jackson-threetenbp.version>
-
-    <springframework.boot.version>2.2.1.RELEASE</springframework.boot.version>
-    <spring.version>5.2.1.RELEASE</spring.version>
-    <springfox-version>2.9.2</springfox-version>
-
-    <jaxb2.basics.version>0.12.0</jaxb2.basics.version>
-    <jaxb2.impl.version>2.3.1</jaxb2.impl.version>
-    <jaxb2.core.version>2.3.0.1</jaxb2.core.version>
-    <jaxb.maven.plugin.version>0.14.0</jaxb.maven.plugin.version>
-    <jaxb.annotate.version>1.1.0</jaxb.annotate.version>
-
-
-    <swagger.codegen.version>2.4.4</swagger.codegen.version>
-
-    <saxon.version>9.8.0-8</saxon.version>
-    <xmlcatalog-resolver.version>1.0.5</xmlcatalog-resolver.version>
-
-    <slf4j.api.version>1.7.26</slf4j.api.version>
-    <log4j2.version>2.12.1</log4j2.version>
-    <logback.version>1.2.3</logback.version>
-
-    <junit.version>5.5.2</junit.version>
-
-    <github.global.server>github</github.global.server>
-    <local.mvn>${project.build.directory}/mvn-repo</local.mvn>
-    <remote.mvn>refs/heads/kmdp-bom</remote.mvn>
-  </properties>
-
-  <scm>
-    <connection>scm:git:git://github.com/API4KBs/kmdp-bom.git</connection>
-    <developerConnection>scm:git:ssh://github.com:API4KBs/kmdp-bom.git</developerConnection>
-    <url>https://github.com/API4KBs/kmdp-bom/tree/master</url>
-  </scm>
 
   <dependencies>
     <dependency>
@@ -101,24 +20,60 @@
     </dependency>
   </dependencies>
 
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <java.version>11</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+
+    <!-- KMD Properties -->
+    <api4kp.version>8.0.4-SNAPSHOT</api4kp.version>
+    <kmdp.impl.version>8.0.4-SNAPSHOT</kmdp.impl.version>
+    <kmdp.standards.version>8.0.4-SNAPSHOT</kmdp.standards.version>
+    <kmdp.archetype.version>8.0.4-SNAPSHOT</kmdp.archetype.version>
+    <ontology.release.version>LATEST</ontology.release.version>
+
+    <!-- External Properties -->
+    <cql.engine.version>1.3.11</cql.engine.version>
+    <cqf.version>1.4.8</cqf.version>
+    <hapi.fhir.version>4.1.0</hapi.fhir.version>
+    <owlapi.version>5.1.11</owlapi.version>
+    <jena.version>3.10.0</jena.version>
+    <oak.version>1.20.0</oak.version>
+    <antlr.version>4.7.2</antlr.version>
+    <jackson.version>2.9.8</jackson.version>
+    <jackson-threetenbp.version>2.6.4</jackson-threetenbp.version>
+    <springframework.boot.version>2.2.1.RELEASE</springframework.boot.version>
+    <spring.version>5.2.1.RELEASE</spring.version>
+    <springfox-version>2.9.2</springfox-version>
+    <jaxb2.basics.version>0.12.0</jaxb2.basics.version>
+    <jaxb2.impl.version>2.3.1</jaxb2.impl.version>
+    <jaxb2.core.version>2.3.0.1</jaxb2.core.version>
+    <jaxb.maven.plugin.version>0.14.0</jaxb.maven.plugin.version>
+    <jaxb.annotate.version>1.1.0</jaxb.annotate.version>
+    <swagger.codegen.version>2.4.4</swagger.codegen.version>
+    <saxon.version>9.8.0-8</saxon.version>
+    <xmlcatalog-resolver.version>1.0.5</xmlcatalog-resolver.version>
+    <slf4j.api.version>1.7.26</slf4j.api.version>
+    <log4j2.version>2.12.1</log4j2.version>
+    <logback.version>1.2.3</logback.version>
+    <junit.version>5.5.2</junit.version>
+    <github.global.server>github</github.global.server>
+    <local.mvn>${project.build.directory}/mvn-repo</local.mvn>
+    <remote.mvn>refs/heads/kmdp-bom</remote.mvn>
+  </properties>
+
   <dependencyManagement>
     <dependencies>
-
-      <!-- Core specs -->
-
+      <!-- API4KP (Core Specs) Library -->
       <dependency>
         <groupId>org.omg.spec</groupId>
         <artifactId>API4KP</artifactId>
         <version>${api4kp.version}</version>
       </dependency>
 
-      <!-- Core Specs Implementation -->
-
-      <dependency>
-        <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>kmdp-environment</artifactId>
-        <version>${kmdp.impl.version}</version>
-      </dependency>
+      <!-- Core Specs Implementation: OpenAPI Spring Archetype -->
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>kmdp-openapi-spring-service-archetype</artifactId>
@@ -130,8 +85,14 @@
         <version>${kmdp.archetype.version}</version>
       </dependency>
 
-      <!-- Utils -->
+      <!-- Core Specs Implementation: KMDP Impl: Environment -->
+      <dependency>
+        <groupId>edu.mayo.kmdp</groupId>
+        <artifactId>kmdp-environment</artifactId>
+        <version>${kmdp.impl.version}</version>
+      </dependency>
 
+      <!-- KMDP Impl: Utilities -->
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>kmdp-utils</artifactId>
@@ -149,8 +110,7 @@
         <scope>test</scope>
       </dependency>
 
-      <!-- Models -->
-
+      <!-- KMDP Impl: Core: Models -->
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>kmdp-datatype</artifactId>
@@ -168,11 +128,6 @@
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>kmdp-asset-metadata</artifactId>
-        <version>${kmdp.impl.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>edu.mayo.kmdp</groupId>
         <artifactId>kmdp-asset-surrogate</artifactId>
         <version>${kmdp.impl.version}</version>
       </dependency>
@@ -182,20 +137,7 @@
         <version>${kmdp.impl.version}</version>
       </dependency>
 
-      <dependency>
-        <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>kmdp-ext-spec</artifactId>
-        <version>${kmdp.impl.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>kmdp-ccg-model</artifactId>
-        <version>${kmdp.impl.version}</version>
-      </dependency>
-
-
-      <!-- Ops -->
-
+      <!-- KMDP Impl: Ops -->
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>xmi-xsd-xslt-translator</artifactId>
@@ -224,14 +166,12 @@
         <version>${kmdp.impl.version}</version>
       </dependency>
 
-      <!-- All 3rd party -->
-
+      <!-- KMDP Standard Models Impl -->
       <dependency>
-        <groupId>com.github.zafarkhaja</groupId>
-        <artifactId>java-semver</artifactId>
-        <version>0.9.0</version>
+        <groupId>edu.mayo.kmdp</groupId>
+        <artifactId>kmdp-asset-metadata</artifactId>
+        <version>${kmdp.impl.version}</version>
       </dependency>
-
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>omg-dmn-11</artifactId>
@@ -278,8 +218,24 @@
         <version>${kmdp.standards.version}</version>
       </dependency>
 
+      <!-- KMDP Ext Impl -->
+      <dependency>
+        <groupId>edu.mayo.kmdp</groupId>
+        <artifactId>kmdp-ext-spec</artifactId>
+        <version>${kmdp.impl.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>edu.mayo.kmdp</groupId>
+        <artifactId>kmdp-ccg-model</artifactId>
+        <version>${kmdp.impl.version}</version>
+      </dependency>
 
-      <!-- Supporting Libraries -->
+      <!-- External 3rd Party Dependencies -->
+      <dependency>
+        <groupId>com.github.zafarkhaja</groupId>
+        <artifactId>java-semver</artifactId>
+        <version>0.9.0</version>
+      </dependency>
       <dependency>
         <groupId>info.cqframework</groupId>
         <artifactId>cql-engine-fhir</artifactId>
@@ -315,8 +271,6 @@
         <artifactId>elm</artifactId>
         <version>${cqf.version}</version>
       </dependency>
-
-
       <dependency>
         <groupId>javax.inject</groupId>
         <artifactId>javax.inject</artifactId>
@@ -357,7 +311,6 @@
         <artifactId>jaxb-impl</artifactId>
         <version>${jaxb2.impl.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.jvnet.jaxb2_commons</groupId>
         <artifactId>jaxb2-basics-runtime</artifactId>
@@ -373,7 +326,6 @@
         <artifactId>jaxb2-basics-tools</artifactId>
         <version>${jaxb2.basics.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.jvnet.jaxb2_commons</groupId>
         <artifactId>jaxb2-basics</artifactId>
@@ -389,8 +341,6 @@
         <artifactId>jaxb2-namespace-prefix</artifactId>
         <version>1.3</version>
       </dependency>
-
-
       <dependency>
         <groupId>org.jvnet.jaxb2.maven2</groupId>
         <artifactId>maven-jaxb2-plugin</artifactId>
@@ -403,8 +353,6 @@
         </exclusions>
         <scope>test</scope>
       </dependency>
-
-
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-databind</artifactId>
@@ -440,7 +388,6 @@
         <artifactId>jackson-datatype-jdk8</artifactId>
         <version>${jackson.version}</version>
       </dependency>
-
       <dependency>
         <groupId>de.escalon.hypermedia</groupId>
         <artifactId>hydra-spring</artifactId>
@@ -465,8 +412,6 @@
         <artifactId>hydra-jsonld</artifactId>
         <version>0.4.2</version>
       </dependency>
-
-
       <dependency>
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-csv</artifactId>
@@ -500,7 +445,6 @@
           </exclusion>
         </exclusions>
       </dependency>
-
       <dependency>
         <groupId>org.apache.jackrabbit</groupId>
         <artifactId>oak-segment-tar</artifactId>
@@ -511,14 +455,11 @@
         <artifactId>jcr</artifactId>
         <version>2.0</version>
       </dependency>
-
       <dependency>
         <groupId>com.codahale.metrics</groupId>
         <artifactId>metrics-core</artifactId>
         <version>3.0.2</version>
       </dependency>
-
-
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot</artifactId>
@@ -530,7 +471,6 @@
           </exclusion>
         </exclusions>
       </dependency>
-
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-web</artifactId>
@@ -542,7 +482,6 @@
           </exclusion>
         </exclusions>
       </dependency>
-
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-tomcat</artifactId>
@@ -554,7 +493,6 @@
           </exclusion>
         </exclusions>
       </dependency>
-
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-web</artifactId>
@@ -576,8 +514,6 @@
         <artifactId>guava</artifactId>
         <version>23.0</version>
       </dependency>
-
-
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-test</artifactId>
@@ -589,7 +525,6 @@
           </exclusion>
         </exclusions>
       </dependency>
-
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-test</artifactId>
@@ -602,7 +537,6 @@
           </exclusion>
         </exclusions>
       </dependency>
-
       <dependency>
         <groupId>io.springfox</groupId>
         <artifactId>springfox-swagger2</artifactId>
@@ -613,7 +547,6 @@
         <artifactId>springfox-swagger-ui</artifactId>
         <version>${springfox-version}</version>
       </dependency>
-
       <dependency>
         <groupId>net.sf.saxon</groupId>
         <artifactId>Saxon-HE</artifactId>
@@ -624,9 +557,6 @@
         <artifactId>xml-commons-resolver</artifactId>
         <version>1.2</version>
       </dependency>
-
-
-
       <dependency>
         <groupId>com.samskivert</groupId>
         <artifactId>jmustache</artifactId>
@@ -638,19 +568,16 @@
           </exclusion>
         </exclusions>
       </dependency>
-
       <dependency>
         <groupId>net.sf.jopt-simple</groupId>
         <artifactId>jopt-simple</artifactId>
         <version>4.7</version>
       </dependency>
-
       <dependency>
         <groupId>org.antlr</groupId>
         <artifactId>antlr4-runtime</artifactId>
         <version>${antlr.version}</version>
       </dependency>
-
       <dependency>
         <groupId>com.thewebsemantic</groupId>
         <artifactId>jenabean</artifactId>
@@ -681,7 +608,6 @@
         <artifactId>owlapi-distribution</artifactId>
         <version>${owlapi.version}</version>
       </dependency>
-
       <dependency>
         <groupId>edu.stanford.protege</groupId>
         <artifactId>org.protege.xmlcatalog</artifactId>
@@ -693,14 +619,11 @@
           </exclusion>
         </exclusions>
       </dependency>
-
       <dependency>
         <groupId>net.sourceforge.owlapi</groupId>
         <artifactId>org.semanticweb.hermit</artifactId>
         <version>1.4.3.517</version>
       </dependency>
-
-
       <dependency>
         <groupId>ru.avicomp</groupId>
         <artifactId>ontapi</artifactId>
@@ -732,7 +655,6 @@
           </exclusion>
         </exclusions>
       </dependency>
-
       <dependency>
         <groupId>org.sl4fj</groupId>
         <artifactId>slf4j-api</artifactId>
@@ -743,7 +665,6 @@
         <artifactId>logback-classic</artifactId>
         <version>${logback.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.apache.maven</groupId>
         <artifactId>maven-plugin-api</artifactId>
@@ -754,7 +675,6 @@
         <artifactId>maven-core</artifactId>
         <version>3.3.9</version>
       </dependency>
-
       <!-- dependencies to annotations -->
       <dependency>
         <groupId>org.apache.maven.plugin-tools</groupId>
@@ -766,8 +686,6 @@
         <artifactId>maven-archetype-plugin</artifactId>
         <version>3.0.1</version>
       </dependency>
-
-
       <dependency>
         <groupId>io.swagger</groupId>
         <artifactId>swagger-parser</artifactId>
@@ -788,13 +706,11 @@
         <artifactId>swagger-annotations</artifactId>
         <version>1.5.22</version>
       </dependency>
-
       <dependency>
         <groupId>org.jsoup</groupId>
         <artifactId>jsoup</artifactId>
         <version>1.11.3</version>
       </dependency>
-
       <dependency>
         <groupId>ca.uhn.hapi.fhir</groupId>
         <artifactId>hapi-fhir-structures-dstu3</artifactId>
@@ -825,15 +741,12 @@
         <artifactId>hapi-fhir-validation</artifactId>
         <version>${hapi.fhir.version}</version>
       </dependency>
-
-
       <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter</artifactId>
         <version>${junit.version}</version>
         <scope>test</scope>
       </dependency>
-
       <dependency>
         <groupId>org.reflections</groupId>
         <artifactId>reflections</artifactId>
@@ -844,13 +757,11 @@
         <artifactId>janino</artifactId>
         <version>3.1.0</version>
       </dependency>
-
       <dependency>
         <groupId>org.javers</groupId>
         <artifactId>javers-core</artifactId>
         <version>5.8.5</version>
       </dependency>
-
       <!--dependency>
         <groupId>com.jason-goodwin</groupId>
         <artifactId>better-monads</artifactId>
@@ -861,15 +772,11 @@
         <artifactId>javassist</artifactId>
         <version>3.21.0-GA</version>
       </dependency-->
-
-
     </dependencies>
   </dependencyManagement>
 
-
+  <!-- Build Settings -->
   <build>
-
-
     <pluginManagement>
       <plugins>
         <plugin>
@@ -877,54 +784,45 @@
           <artifactId>maven-plugin-plugin</artifactId>
           <version>3.6.0</version>
         </plugin>
-
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>xml-maven-plugin</artifactId>
           <version>1.0.2</version>
         </plugin>
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
         </plugin>
-
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M3</version>
         </plugin>
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
           <version>3.2.2</version>
         </plugin>
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
           <version>3.0.2</version>
         </plugin>
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.1.0</version>
         </plugin>
-
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>exec-maven-plugin</artifactId>
           <version>1.6.0</version>
         </plugin>
-
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>properties-maven-plugin</artifactId>
           <version>1.0.0</version>
         </plugin>
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
@@ -938,7 +836,6 @@
             </execution>
           </executions>
         </plugin>
-
 <!--        <plugin>-->
 <!--          <groupId>org.apache.maven.plugins</groupId>-->
 <!--          <artifactId>maven-javadoc-plugin</artifactId>-->
@@ -984,19 +881,16 @@
 <!--            </tags>-->
 <!--          </configuration>-->
 <!--        </plugin>-->
-
         <plugin>
           <groupId>io.swagger</groupId>
           <artifactId>swagger-codegen-maven-plugin</artifactId>
           <version>${swagger.codegen.version}</version>
         </plugin>
-
         <plugin>
           <groupId>org.jvnet.jaxb2.maven2</groupId>
           <artifactId>maven-jaxb2-plugin</artifactId>
           <version>${jaxb.maven.plugin.version}</version>
           <configuration>
-
             <extension>true</extension>
             <useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
             <packageLevelAnnotations>true</packageLevelAnnotations>
@@ -1004,7 +898,6 @@
             <enableIntrospection>false</enableIntrospection>
             <episode>true</episode>
             <strict>false</strict>
-
             <args>
               <arg>-Xfluent-api</arg>
               <arg>-Xannotate</arg>
@@ -1016,7 +909,6 @@
               <arg>-Xcopyable</arg>
               <arg>-no-header</arg>
             </args>
-
             <plugins>
               <plugin>
                 <groupId>org.jvnet.jaxb2_commons</groupId>
@@ -1034,7 +926,6 @@
                 <artifactId>jaxb2-namespace-prefix</artifactId>
                 <version>1.3</version>
               </plugin>
-
               <plugin>
                 <groupId>org.jvnet.jaxb2_commons</groupId>
                 <artifactId>jaxb2-basics-annotate</artifactId>
@@ -1060,7 +951,6 @@
             </dependency>
           </dependencies>
         </plugin>
-
         <plugin>
           <groupId>io.swagger</groupId>
           <artifactId>swaggerhub-maven-plugin</artifactId>
@@ -1070,31 +960,25 @@
             <format>yaml</format>
           </configuration>
         </plugin>
-
         <plugin>
           <groupId>edu.mayo.kmdp</groupId>
           <artifactId>kmdp-configurable-archetype-plugin</artifactId>
           <version>0.2.0</version>
         </plugin>
-
         <plugin>
           <groupId>org.antlr</groupId>
           <artifactId>antlr4-maven-plugin</artifactId>
           <version>${antlr.version}</version>
         </plugin>
-
         <plugin>
           <groupId>pl.project13.maven</groupId>
           <artifactId>git-commit-id-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
-
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
           <version>3.0.0-M2</version>
-
           <executions>
             <execution>
               <id>enforce</id>
@@ -1123,32 +1007,52 @@
             </dependency>
           </dependencies>
         </plugin>
-
       </plugins>
-
     </pluginManagement>
 
-
+    <!-- Plugins -->
     <plugins>
-
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
       </plugin>
-
       <plugin>
         <artifactId>maven-source-plugin</artifactId>
       </plugin>
-
 <!--      <plugin>-->
 <!--        <artifactId>maven-javadoc-plugin</artifactId>-->
 <!--      </plugin>-->
-
-
     </plugins>
-
-
   </build>
+  
+  <!-- More Project Information -->
+  <licenses>
+    <license>
+      <name>The Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
 
+  <developers>
+    <developer>
+      <name>Davide Sottara</name>
+      <email>sottara.davide@mayo.edu</email>
+      <organization>Mayo Clinic</organization>
+      <organizationUrl>http://www.mayo.edu</organizationUrl>
+    </developer>
+    <developer>
+      <name>Kevin Peterson</name>
+      <email>peterson.kevin@mayo.edu</email>
+      <organization>Mayo Clinic</organization>
+      <organizationUrl>http://www.mayo.edu</organizationUrl>
+    </developer>
+  </developers>
+
+  <!-- Environment Settings -->
+  <scm>
+    <connection>scm:git:git://github.com/API4KBs/kmdp-bom.git</connection>
+    <developerConnection>scm:git:ssh://github.com:API4KBs/kmdp-bom.git</developerConnection>
+    <url>https://github.com/API4KBs/kmdp-bom/tree/master</url>
+  </scm>
 
   <profiles>
     <profile>
@@ -1156,7 +1060,6 @@
       <activation>
         <activeByDefault>false</activeByDefault>
       </activation>
-
       <repositories>
         <repository>
           <id>central</id>
@@ -1183,7 +1086,6 @@
           </releases>
         </pluginRepository>
       </pluginRepositories>
-
       <distributionManagement>
         <repository>
           <id>bintray-api4kbs-API4KP-Mvn-Repo</id>
@@ -1192,7 +1094,6 @@
         </repository>
       </distributionManagement>
     </profile>
-
     <profile>
       <id>release</id>
       <activation>
@@ -1207,7 +1108,6 @@
         </plugins>
       </build>
     </profile>
-
     <profile>
       <id>license-headers</id>
       <activation>
@@ -1260,6 +1160,5 @@
       </build>
     </profile>
   </profiles>
-
 
 </project>
