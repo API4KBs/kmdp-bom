@@ -169,11 +169,6 @@
       <!-- KMDP Standard Models Impl -->
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
-        <artifactId>kmdp-asset-metadata</artifactId>
-        <version>${kmdp.impl.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>edu.mayo.kmdp</groupId>
         <artifactId>omg-dmn-11</artifactId>
         <version>${kmdp.standards.version}</version>
       </dependency>
