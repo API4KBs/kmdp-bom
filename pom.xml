@@ -58,6 +58,7 @@
     <slf4j.api.version>1.7.26</slf4j.api.version>
     <log4j2.version>2.12.1</log4j2.version>
     <logback.version>1.2.3</logback.version>
+    <splunk.version>1.7.3</splunk.version>
     <junit.version>5.5.2</junit.version>
     <github.global.server>github</github.global.server>
     <local.mvn>${project.build.directory}/mvn-repo</local.mvn>
@@ -659,6 +660,11 @@
         <groupId>ch.qos.logback</groupId>
         <artifactId>logback-classic</artifactId>
         <version>${logback.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.splunk.logging</groupId>
+        <artifactId>splunk-library-javalogging</artifactId>
+        <version>${splunk.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.maven</groupId>
