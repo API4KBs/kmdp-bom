@@ -37,7 +37,7 @@
     <!-- External Properties -->
     <cql.engine.version>1.3.11</cql.engine.version>
     <cqf.version>1.4.8</cqf.version>
-    <hapi.fhir.version>4.1.0</hapi.fhir.version>
+    <hapi.fhir.version>5.1.0</hapi.fhir.version>
     <owlapi.version>5.1.11</owlapi.version>
     <jena.version>3.10.0</jena.version>
     <oak.version>1.38.0</oak.version>
