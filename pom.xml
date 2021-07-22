@@ -60,7 +60,7 @@
     <logback.version>1.2.3</logback.version>
     <splunk.version>1.7.3</splunk.version>
     <junit.version>5.5.2</junit.version>
-    <aspectj.version>1.9.4</aspectj.version>
+    <aspectj.version>1.9.7</aspectj.version>
     <github.global.server>github</github.global.server>
     <local.mvn>${project.build.directory}/mvn-repo</local.mvn>
     <remote.mvn>refs/heads/kmdp-bom</remote.mvn>
