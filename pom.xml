@@ -52,7 +52,7 @@
     <jaxb2.core.version>2.3.0.1</jaxb2.core.version>
     <jaxb.maven.plugin.version>0.14.0</jaxb.maven.plugin.version>
     <jaxb.annotate.version>1.1.0</jaxb.annotate.version>
-    <swagger.codegen.version>2.4.4</swagger.codegen.version>
+    <swagger.codegen.version>2.4.19</swagger.codegen.version>
     <saxon.version>9.8.0-8</saxon.version>
     <xmlcatalog-resolver.version>1.0.5</xmlcatalog-resolver.version>
     <slf4j.api.version>1.7.26</slf4j.api.version>
