@@ -42,8 +42,8 @@
     <jena.version>3.10.0</jena.version>
     <oak.version>1.38.0</oak.version>
     <antlr.version>4.7.2</antlr.version>
-    <jackson.version>2.9.8</jackson.version>
-    <jackson-threetenbp.version>2.6.4</jackson-threetenbp.version>
+    <jackson.version>2.11.2</jackson.version>
+    <jackson-threetenbp.version>2.11.2</jackson-threetenbp.version>
     <springframework.boot.version>2.2.1.RELEASE</springframework.boot.version>
     <spring.version>5.2.1.RELEASE</spring.version>
     <springfox-version>2.9.2</springfox-version>
