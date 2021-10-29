@@ -47,7 +47,7 @@
     <springframework.boot.version>2.2.1.RELEASE</springframework.boot.version>
     <spring.version>5.2.1.RELEASE</spring.version>
     <springfox-version>2.9.2</springfox-version>
-    <problem.api.version>0.26.0</problem.api.version>
+    <problem.api.version>0.24.0</problem.api.version>
     <jaxb2.basics.version>0.12.0</jaxb2.basics.version>
     <jaxb2.impl.version>2.3.1</jaxb2.impl.version>
     <jaxb2.core.version>2.3.0.1</jaxb2.core.version>
