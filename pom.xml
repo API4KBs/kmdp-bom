@@ -174,46 +174,55 @@
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>omg-dmn-11</artifactId>
         <version>${kmdp.standards.version}</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>omg-dmn-12</artifactId>
         <version>${kmdp.standards.version}</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>omg-cmmn-11</artifactId>
         <version>${kmdp.standards.version}</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>omg-bpmn-202</artifactId>
         <version>${kmdp.standards.version}</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>hl7-knart-13</artifactId>
         <version>${kmdp.standards.version}</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>hl7-fhir-stu3</artifactId>
         <version>${kmdp.standards.version}</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>hl7-fhir-dstu2</artifactId>
         <version>${kmdp.standards.version}</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>hl7-fhirpath-stu1</artifactId>
         <version>${kmdp.standards.version}</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>edu.mayo.kmdp</groupId>
         <artifactId>w3c-odrl-21</artifactId>
         <version>${kmdp.standards.version}</version>
+        <scope>provided</scope>
       </dependency>
 
       <!-- KMDP Ext Impl -->
