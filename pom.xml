@@ -57,9 +57,9 @@
     <saxon.version>9.8.0-8</saxon.version>
     <xmlcatalog-resolver.version>1.0.5</xmlcatalog-resolver.version>
     <slf4j.api.version>1.7.30</slf4j.api.version>
-    <log4j2.version>2.15.0</log4j2.version>
+    <log4j2.version>2.16.0</log4j2.version>
     <logback.version>1.2.3</logback.version>
-    <splunk.version>1.11.1</splunk.version>
+    <splunk.version>1.11.2</splunk.version>
     <junit.version>5.5.2</junit.version>
     <aspectj.version>1.9.7</aspectj.version>
     <github.global.server>github</github.global.server>
@@ -640,17 +640,6 @@
         <groupId>net.sourceforge.owlapi</groupId>
         <artifactId>owlapi-distribution</artifactId>
         <version>${owlapi.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>edu.stanford.protege</groupId>
-        <artifactId>org.protege.xmlcatalog</artifactId>
-        <version>${xmlcatalog-resolver.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>net.sourceforge.owlapi</groupId>
-            <artifactId>owlapi-osgidistribution</artifactId>
-          </exclusion>
-        </exclusions>
       </dependency>
       <dependency>
         <groupId>net.sourceforge.owlapi</groupId>
