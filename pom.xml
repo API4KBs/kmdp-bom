@@ -56,10 +56,10 @@
     <swagger.codegen.version>2.4.4</swagger.codegen.version>
     <saxon.version>9.8.0-8</saxon.version>
     <xmlcatalog-resolver.version>1.0.5</xmlcatalog-resolver.version>
-    <slf4j.api.version>1.7.26</slf4j.api.version>
+    <slf4j.api.version>1.7.30</slf4j.api.version>
     <log4j2.version>2.15.0</log4j2.version>
     <logback.version>1.2.3</logback.version>
-    <splunk.version>1.7.3</splunk.version>
+    <splunk.version>1.11.1</splunk.version>
     <junit.version>5.5.2</junit.version>
     <aspectj.version>1.9.7</aspectj.version>
     <github.global.server>github</github.global.server>
