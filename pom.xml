@@ -59,7 +59,7 @@
     <slf4j.api.version>1.7.30</slf4j.api.version>
     <log4j2.version>2.17.0</log4j2.version>
     <logback.version>1.2.9</logback.version>
-    <splunk.version>1.11.4</splunk.version>
+    <splunk.version>1.11.3</splunk.version>
     <junit.version>5.5.2</junit.version>
     <aspectj.version>1.9.7</aspectj.version>
     <github.global.server>github</github.global.server>
@@ -1149,6 +1149,11 @@
           <releases>
             <enabled>true</enabled>
           </releases>
+        </repository>
+        <repository>
+          <id>splunk-artifactory</id>
+          <name>Splunk Releases</name>
+          <url>https://splunk.jfrog.io/splunk/ext-releases-local</url>
         </repository>
         <repository>
           <id>bintray-api4kbs-API4KP-Mvn-Repo</id>
