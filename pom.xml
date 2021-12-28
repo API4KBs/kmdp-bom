@@ -1138,9 +1138,9 @@
 
   <profiles>
     <profile>
-      <id>public</id>
+      <id>upstream-maven-repos</id>
       <activation>
-        <activeByDefault>false</activeByDefault>
+        <activeByDefault>true</activeByDefault>
       </activation>
       <repositories>
         <repository>
@@ -1155,14 +1155,6 @@
           <name>Splunk Releases</name>
           <url>https://splunk.jfrog.io/splunk/ext-releases-local</url>
         </repository>
-        <repository>
-          <id>bintray-api4kbs-API4KP-Mvn-Repo</id>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-          <name>bintray</name>
-          <url>https://dl.bintray.com/api4kbs/API4KP-Mvn-Repo</url>
-        </repository>
       </repositories>
       <pluginRepositories>
         <pluginRepository>
@@ -1173,13 +1165,6 @@
           </releases>
         </pluginRepository>
       </pluginRepositories>
-      <distributionManagement>
-        <repository>
-          <id>bintray-api4kbs-API4KP-Mvn-Repo</id>
-          <name>api4kbs-API4KP-Mvn-Repo</name>
-          <url>https://api.bintray.com/maven/api4kbs/API4KP-Mvn-Repo/kmdp-bom/;override=1;publish=1</url>
-        </repository>
-      </distributionManagement>
     </profile>
     <profile>
       <id>release</id>
