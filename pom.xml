@@ -1208,7 +1208,6 @@
                 <exclude>**/*.xml.versionsBackup</exclude>
                 <exclude>**/*.sh</exclude>
                 <exclude>**/LICENSE</exclude>
-                <exclude>**/*travis*</exclude>
               </excludes>
             </configuration>
             <executions>
@@ -1230,6 +1229,20 @@
           </plugin>
         </plugins>
       </build>
+    </profile>
+
+    <profile>
+      <id>public</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <distributionManagement>
+        <repository>
+          <id>github</id>
+          <name>kmdp-impl-github</name>
+          <url>https://maven.pkg.github.com/API4KBs/kmdp-build</url>
+        </repository>
+      </distributionManagement>
     </profile>
   </profiles>
 
