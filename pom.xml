@@ -862,6 +862,12 @@
         <scope>test</scope>  <!-- must be test only -->
       </dependency>
 
+      <dependency>
+        <groupId>com.googlecode.owasp-java-html-sanitizer</groupId>
+        <artifactId>owasp-java-html-sanitizer</artifactId>
+        <version>20211018.2</version>
+      </dependency>
+
     </dependencies>
   </dependencyManagement>
 
