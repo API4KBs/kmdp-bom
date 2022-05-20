@@ -57,7 +57,7 @@
     <jaxb.maven.plugin.version>0.14.0</jaxb.maven.plugin.version>
     <jaxb.annotate.version>1.1.0</jaxb.annotate.version>
     <swagger.codegen.version>2.4.4</swagger.codegen.version>
-    <saxon.version>9.8.0-8</saxon.version>
+    <saxon.version>11.3</saxon.version>
     <slf4j.api.version>1.7.30</slf4j.api.version>
     <log4j2.version>2.17.1</log4j2.version>
     <logback.version>1.2.10</logback.version>
