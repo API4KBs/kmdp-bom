@@ -866,7 +866,7 @@
     <saxon.version>11.3</saxon.version>
     <slf4j.api.version>1.7.30</slf4j.api.version>
     <log4j2.version>2.17.1</log4j2.version>
-    <logback.version>1.2.10</logback.version>
+    <logback.version>1.2.11</logback.version>
     <splunk.version>1.11.4</splunk.version>
     <junit.version>5.5.2</junit.version>
     <mockito.version>3.8.0</mockito.version>
