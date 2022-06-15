@@ -550,6 +550,13 @@
         <groupId>net.sf.saxon</groupId>
         <artifactId>Saxon-HE</artifactId>
         <version>${saxon.version}</version>
+        <exclusions>
+          <exclusion>
+            <!-- Possible conflict with JDK11 native implementation of the XML interfaces -->
+            <artifactId>xml-apis</artifactId>
+            <groupId>xml-apis</groupId>
+          </exclusion>
+        </exclusions>
       </dependency>
       <dependency>
         <groupId>org.apache.xml</groupId>
