@@ -48,7 +48,7 @@
     <antlr.version>4.7.2</antlr.version>
     <jackson.version>2.10.0</jackson.version>
     <jackson-threetenbp.version>2.10.0</jackson-threetenbp.version>
-    <springframework.boot.version>2.2.1.RELEASE</springframework.boot.version>
+    <springframework.boot.version>2.2.11.RELEASE</springframework.boot.version>
     <spring.version>5.2.1.RELEASE</spring.version>
     <springfox-version>2.9.2</springfox-version>
     <problem.api.version>0.24.0</problem.api.version>
