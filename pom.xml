@@ -5,7 +5,7 @@
 
   <groupId>edu.mayo.kmdp</groupId>
   <artifactId>kmdp-bom</artifactId>
-  <version>11.2.3</version>
+  <version>11.2.4-SNAPSHOT</version>
 
   <packaging>pom</packaging>
 
@@ -864,10 +864,10 @@
     <maven.compiler.target>${java.version}</maven.compiler.target>
 
     <!-- KMD Properties -->
-    <api4kp.version>11.2.3</api4kp.version>
-    <kmdp.impl.version>11.2.3</kmdp.impl.version>
-    <kmdp.standards.version>11.2.3</kmdp.standards.version>
-    <kmdp.archetype.version>11.2.3</kmdp.archetype.version>
+    <api4kp.version>11.2.4-SNAPSHOT</api4kp.version>
+    <kmdp.impl.version>11.2.4-SNAPSHOT</kmdp.impl.version>
+    <kmdp.standards.version>11.2.4-SNAPSHOT</kmdp.standards.version>
+    <kmdp.archetype.version>11.2.4-SNAPSHOT</kmdp.archetype.version>
     <ontology.release.version>LATEST</ontology.release.version>
 
     <!-- External Properties -->
