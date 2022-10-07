@@ -1078,6 +1078,11 @@
               <artifactId>jackson-annotations</artifactId>
               <version>${jackson.version}</version>
             </dependency>
+            <dependency>
+              <artifactId>jaxb-runtime</artifactId>
+              <groupId>org.glassfish.jaxb</groupId>
+              <version>${jaxb2.impl.version}</version>
+            </dependency>
           </dependencies>
         </plugin>
         <plugin>
