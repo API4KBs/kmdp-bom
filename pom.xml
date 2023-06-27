@@ -908,7 +908,7 @@
     <cqf.version>1.4.8</cqf.version>
     <hapi.fhir.version>5.1.0</hapi.fhir.version>
     <owlapi.version>5.1.11</owlapi.version>
-    <jena.version>3.10.0</jena.version>
+    <jena.version>4.6.1</jena.version>
     <jackson.version>2.13.3</jackson.version>
     <poi.version>5.2.2</poi.version>
     <antlr.version>4.7.2</antlr.version>
