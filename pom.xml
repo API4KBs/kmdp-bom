@@ -924,7 +924,6 @@
     <kmdp.impl.version>12.0.1-SNAPSHOT</kmdp.impl.version>
     <kmdp.standards.version>12.0.1-SNAPSHOT</kmdp.standards.version>
     <kmdp.archetype.version>12.0.1-SNAPSHOT</kmdp.archetype.version>
-    <kmdp.servers.version>6.0.1-SNAPSHOT</kmdp.servers.version>
     <ontology.release.version>LATEST</ontology.release.version>
 
     <!-- External Properties -->
